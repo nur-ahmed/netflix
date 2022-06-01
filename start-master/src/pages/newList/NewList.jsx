@@ -1,7 +1,7 @@
 import "./newList.css";
 import {useContext, useEffect, useState} from "react";
 import storage  from "../../firebase";
-import { createMovie, getMovies } from "../../context/movieContext/apiCalls";
+import { getMovies } from "../../context/movieContext/apiCalls";
 import {MovieContext} from "../../context/movieContext/MovieContext";
 import { ListContext } from "../../context/listContext/ListContext";
 import { createList } from "../../context/listContext/apiCalls";
@@ -50,7 +50,7 @@ const handleSubmit = (e)=>{
           <label>Type</label>
           <select name="type" onChange={handleChange}>
           <option >Type</option>
-            <option value="movie">Movie</option>
+            <option value="movies">Movies</option>
             <option value="series">Series</option>
           </select>
           </div>

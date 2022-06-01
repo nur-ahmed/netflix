@@ -43,8 +43,6 @@ router.post("/login", async (req, res) => {
 
     return res.status(200).json({ ...info, accessToken });
   } catch (err) {
-    //console.log("LOGIN ERROR")
-    //console.log(err.toString())
     return res.status(500).json(err);
   }
 });

@@ -24,13 +24,13 @@ export default function Register() {
       await axios.post("http://localhost:8800/api/auth/register", {username,email,password});
       history.push("/login");
     }catch(err){
-
+       console.log(err);
     }
   };
   return (
     <div className="register">
       <div className= "left"> 
-          <h3> starmix </h3>
+          <h3> startmix </h3>
       </div>
       <form>
           <div className="container">

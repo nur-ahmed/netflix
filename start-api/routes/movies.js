@@ -82,8 +82,6 @@ router.get("/random", verify, async (req, res) => {
     }
     return res.status(200).json(movie);
   } catch (err) {
-    console.log("ERROR");
-    console.log(err.toString());
     return res.status(500).json(err);
   }
 });

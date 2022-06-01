@@ -15,7 +15,7 @@ export default function Login() {
   return (
     <div className= "login">
         <div className= "left"> 
-             <h3> starmix </h3>
+             <h3> StartMix </h3>
         </div>
         <div className="container">
             <form>

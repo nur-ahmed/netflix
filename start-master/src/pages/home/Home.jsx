@@ -1,7 +1,6 @@
 import Chart from "../../components/chart/Chart";
 import "./home.css";
 import WidgetSm from "../../components/widgetSm/WidgetSm";
-import WidgetLg from "../../components/widgetLg/WidgetLg";
 import { useEffect, useMemo, useState } from "react";
 import axios from "axios";
 
@@ -47,15 +46,11 @@ export default function Home() {
     };
     getStats();
   },[MONTHS]);
- 
-
   return (
     <div className="home">
-  
       <Chart data={userStats} title="User Analytics" grid dataKey="New User"/>
       <div className="homeWidgets">
         <WidgetSm/>
-        <WidgetLg/>
       </div>
     </div>
   );

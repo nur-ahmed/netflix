@@ -30,7 +30,7 @@ export default function ListItem({ index ,item}) {
   },[item]);
 
   return(
-    <Link to={{pathname: "/watch",movie: movie}}>
+    <Link to={{pathname: "/watch", movie: movie }}>
     
     <div
       className="listItem"

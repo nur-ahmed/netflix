@@ -1,5 +1,4 @@
 import "./widgetSm.css";
-import { Visibility } from "@material-ui/icons";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -22,7 +21,7 @@ export default function WidgetSm() {
   },[]);
   return (
     <div className="widgetSm">
-      <span className="widgetSmTitle">New Join Members</span>
+      <span className="widgetSmTitle">Yeni Kullancı</span>
       <ul className="widgetSmList">
         {newUsers.map((user)=>(
         <li className="widgetSmListItem">
@@ -34,10 +33,7 @@ export default function WidgetSm() {
           <div className="widgetSmUser">
             <span className="widgetSmUsername">{user.username}</span>
           </div>
-          <button className="widgetSmButton">
-            <Visibility className="widgetSmIcon" />
-            Display
-          </button>
+          
         </li>
           ))}
       </ul>

@@ -1,8 +1,4 @@
-import {
-    CalendarToday,
-    PermIdentity,
-  } from "@material-ui/icons";
-  import { Link ,useLocation} from "react-router-dom";
+ import { Link ,useLocation} from "react-router-dom";
   import "./user.css";
   
   export default function User() {

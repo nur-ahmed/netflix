@@ -26,7 +26,7 @@ const Home = ({type}) => {
       }
     };
     getRandomLists();
-  },[type,genre]
+  },[type, genre]
   );
   return (
     <div className="home">

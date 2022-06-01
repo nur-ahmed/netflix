@@ -5,20 +5,22 @@
   .category {
     position: relative;
     position:absolute;
+    text-decoration: none;
     top: 120px;
     left: 90px;
-    font-size: 25px;
-    font-weight: 400;
+    font-size: 30px;
+    font-weight: 500;
     color: white;
     display: flex;
     align-items: center;
     flex-direction: column;
     select {
         cursor: pointer;
-        background-color: black;
+        text-decoration: none;
+        background-color: var(--main-color);
         border: 1px solid white;
         color: white;
-        margin: 20px   10px;
+        margin-left: 20px;
         padding: 5px;
     }
   }
@@ -39,7 +41,8 @@
     flex-direction: column;
 
     img {
-      width: 400px;
+      width: 40vw;
+      margin-top: 100px;
     }
 
     .desc {
@@ -48,4 +51,5 @@
     }
 
   }
+ 
 }

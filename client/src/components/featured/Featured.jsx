@@ -1,12 +1,11 @@
-import { InfoOutlined, PlayArrow } from "@material-ui/icons";
 import { useEffect } from "react";
 import { useState } from "react";
 import "./featured.scss";
 import axios from "axios";
 
-export default function Featured({ type  }) {
+export default function Featured({ type ,setGenre }) {
   const [content,setContent] =useState({});
-  const [genre , setGenre] =useState("");
+
 
   useEffect(()=>{
    const getRandomContent = async ()=>{
@@ -23,21 +22,20 @@ export default function Featured({ type  }) {
    };
    getRandomContent();
   },[type]);
-
+  
   return (
     <div className="featured">
       {type && (
         <div className="category">
-          <span >Lütfen istediğiniz {type === "series" ? "series " : "movies"} türü seçiniz</span>
+          <span >Lütfen istediğiniz {type === "movies" ? "Movies " : "Series"} türü seçiniz</span>
           <select name="genre" id="genre" onChange={(e)=> setGenre(e.target.value)} >
 
             <option>Genre</option>
-              <option value="comedy">Comedy</option>
-              <option value="Drama">Drama</option>
+            <option value="Drama">Drama</option>
+              <option value="Comedy">Comedy</option>
               <option value="children">children</option>
-              <option value="Drama">horror</option>
-              <option value="Drama">romantic</option>
-              <option value="Drama">action</option>
+              <option value="horror">horror</option>
+              <option value="action">action</option>
           </select>
         </div>
       )}
@@ -51,6 +49,8 @@ export default function Featured({ type  }) {
              <span>{content.desc}</span>
            </div>
       </div>
-    </div>
+    
+      </div>
+  
   );
 }

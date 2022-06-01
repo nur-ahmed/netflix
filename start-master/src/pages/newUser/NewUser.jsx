@@ -25,7 +25,7 @@ export default function NewUser() {
       <form className="newUserForm">
         <div className="newUserItem">
           <label>Username</label>
-          <input type="text" placeholder="john" />
+          <input type="text" placeholder="john"  name="username" onChange={handleChange} />
         </div>
         <div className="newUserItem">
           <label>Email</label>

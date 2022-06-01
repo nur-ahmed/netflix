@@ -38,8 +38,6 @@ router.delete("/:id", verify, async (req, res) => {
 router.get("/", verify, async (req, res) => {
   const typeQuery = req.query.type;
   const genreQuery = req.query.genre;
-  //console.log(typeQuery);
-  //console.log(genreQuery);
   let list = [];
   try {
     if (typeQuery) {
@@ -56,13 +54,9 @@ router.get("/", verify, async (req, res) => {
       }
     } else {
       list = await List.aggregate([{ $sample: { size: 10 } }]);
-     // console.log("list");
-     // console.log(list);
     }
     return res.status(200).json(list);
   } catch (err) {
-   // console.log("errr");
-   // console.log(err.toString());
     return res.status(500).json(err);
   }
 });

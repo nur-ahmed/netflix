@@ -3,6 +3,7 @@ import {useContext, useState} from "react";
 import storage  from "../../firebase";
 import { createMovie } from "../../context/movieContext/apiCalls";
 import {MovieContext} from "../../context/movieContext/MovieContext";
+import { useHistory } from "react-router-dom/cjs/react-router-dom";
 
 export default function NewMovie() {
   const [movie,setMovie]= useState(null);
@@ -12,6 +13,7 @@ export default function NewMovie() {
   const [trailer,setTrailer]= useState(null);
   const [video,setVideo]= useState(null);
   const [uploaded,setUploaded]= useState(0);
+  const history = useHistory();
 
   const {dispatch} = useContext(MovieContext);
 
@@ -59,6 +61,7 @@ const handleUpload =(e) =>{
 const handleSubmit = (e)=>{
   e.preventDefault();
   createMovie(movie,dispatch);
+  history.push("/movies")
 };
 
   return (
@@ -101,7 +104,7 @@ const handleSubmit = (e)=>{
         </div>
         <div className="addProductItem">
           <label>Duration</label>
-          <input type="text" placeholder="duration" name="duration" />
+          <input type="text" placeholder="duration" name="duration"onChange={handleChange} />
         </div>
         <div className="addProductItem">
           <label>Limit</label>

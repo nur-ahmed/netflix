@@ -18,7 +18,7 @@ const Header = () => {
     <div className={isScrolled ? "header scrolled" : "header"}>
         <div className="container">
           <div className= "left"> 
-              <h3> starmix </h3> 
+              <h3> StartMix </h3> 
               <div className= "center"> 
                   <Link to="/" className="link">
                   <span>Home</span>  
@@ -42,6 +42,7 @@ const Header = () => {
                   </div>
               </div>
           </div>
+          
     </div>
 
     );
